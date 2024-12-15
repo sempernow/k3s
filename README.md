@@ -437,6 +437,42 @@ healthz check passed
 }
 ```
 
+## Network : `iperf3`
+
+```bash
+☩ k get node -o wide
+NAME   STATUS   ROLES                  AGE     VERSION        INTERNAL-IP      EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION                       CONTAINER-RUNTIME
+xpc    Ready    control-plane,master   4h40m   v1.31.3+k3s1   172.27.240.169   <none>        Ubuntu 22.04.4 LTS   5.15.167.4-microsoft-standard-WSL2   containerd://1.7.23-k3s2
+
+☩ k run nbox-s --image=docker.io/n^Colaka/netshoot --restart=Never  -- iperf3 -c
+
+☩ k get pod -o wide
+NAME     READY   STATUS    RESTARTS   AGE   IP           NODE   NOMINATED NODE   READINESS GATES
+nbox-s   1/1     Running   0          19s   10.42.0.23   xpc    <none>           <none>
+
+☩ k run nbox-c --image=docker.io/nicolaka/netshoot -it --rm -- iperf3 -c 10.42.0.23
+If you don't see a command prompt, try pressing enter.
+[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+[  5]   0.00-1.00   sec  4.03 GBytes  34.6 Gbits/sec  141   1.00 MBytes
+[  5]   1.00-2.00   sec  3.94 GBytes  33.8 Gbits/sec    2   1.00 MBytes
+[  5]   2.00-3.00   sec  3.88 GBytes  33.4 Gbits/sec    0   1.00 MBytes
+[  5]   3.00-4.00   sec  3.81 GBytes  32.7 Gbits/sec    0   1.00 MBytes
+[  5]   4.00-5.00   sec  3.73 GBytes  32.1 Gbits/sec    0   1.00 MBytes
+[  5]   5.00-6.00   sec  3.74 GBytes  32.1 Gbits/sec    0   1.00 MBytes
+[  5]   6.00-7.00   sec  3.79 GBytes  32.5 Gbits/sec    0   1.00 MBytes
+[  5]   7.00-8.00   sec  3.79 GBytes  32.6 Gbits/sec    0   1.00 MBytes
+[  5]   8.00-9.00   sec  3.76 GBytes  32.3 Gbits/sec    0   1.00 MBytes
+[  5]   9.00-10.00  sec  3.88 GBytes  33.3 Gbits/sec    0   1.00 MBytes
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Retr
+[  5]   0.00-10.00  sec  38.5 GBytes  33.1 Gbits/sec  143             sender
+[  5]   0.00-10.00  sec  38.5 GBytes  33.1 Gbits/sec                  receiver
+
+iperf Done.
+pod "nbox-c" deleted
+
+```
+
 ### &nbsp;
 <!-- 
 
