@@ -1,0 +1,29 @@
+● k3s.service - Lightweight Kubernetes
+     Loaded: loaded (/etc/systemd/system/k3s.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2024-08-17 10:20:40 EDT; 16min ago
+       Docs: https://k3s.io
+    Process: 482183 ExecStartPre=/bin/sh -xc ! /usr/bin/systemctl is-enabled --quiet nm-cloud-setup.service 2>/dev/null (code=exited, status=0/SUCCESS)
+    Process: 482185 ExecStartPre=/sbin/modprobe br_netfilter (code=exited, status=0/SUCCESS)
+    Process: 482186 ExecStartPre=/sbin/modprobe overlay (code=exited, status=0/SUCCESS)
+   Main PID: 482187 (k3s-server)
+      Tasks: 142
+     Memory: 905.9M
+     CGroup: /system.slice/k3s.service
+             ├─482187 "/usr/local/bin/k3s server"
+             ├─482611 "containerd " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─483549 /var/lib/rancher/k3s/data/b13851fe661ab93938fc9a881cdce529da8c6b9b310b2440ef01a860f8b9c3a9/bin/containerd-shim-runc-v2 -namespace k8s.io -id c54a88a836fd540c716e3a8c6b148debb76277283d3cab772690ff52de46d1d3 -address /run/k3s/containerd/containerd.sock
+             ├─483565 /var/lib/rancher/k3s/data/b13851fe661ab93938fc9a881cdce529da8c6b9b310b2440ef01a860f8b9c3a9/bin/containerd-shim-runc-v2 -namespace k8s.io -id aa5324565a3f13b8ce472b0717be3588895eac8499e014d28a83d9a0a7ca6a89 -address /run/k3s/containerd/containerd.sock
+             ├─483581 /var/lib/rancher/k3s/data/b13851fe661ab93938fc9a881cdce529da8c6b9b310b2440ef01a860f8b9c3a9/bin/containerd-shim-runc-v2 -namespace k8s.io -id 109d3bf7d95c9658be5dc2eb21ad77e1efebbd8aa03b9c0a1492227920feb52f -address /run/k3s/containerd/containerd.sock
+             ├─484717 /var/lib/rancher/k3s/data/b13851fe661ab93938fc9a881cdce529da8c6b9b310b2440ef01a860f8b9c3a9/bin/containerd-shim-runc-v2 -namespace k8s.io -id 0442876535049eddc4b9d48ea9c7f64dae71a689af3d78e54fcd81c1930701c6 -address /run/k3s/containerd/containerd.sock
+             └─484725 /var/lib/rancher/k3s/data/b13851fe661ab93938fc9a881cdce529da8c6b9b310b2440ef01a860f8b9c3a9/bin/containerd-shim-runc-v2 -namespace k8s.io -id ef7265f647762ae3b2cfdd6ccb09d1dc6b159a4f9f683990931d7f0580797114 -address /run/k3s/containerd/containerd.sock
+
+Aug 17 10:21:24 XPC k3s[482187]: I0817 10:21:24.796085  482187 resource_quota_monitor.go:224] "QuotaMonitor created object count evaluator" resource="traefikservices.traefik.io"
+Aug 17 10:21:24 XPC k3s[482187]: I0817 10:21:24.796206  482187 shared_informer.go:313] Waiting for caches to sync for resource quota
+Aug 17 10:21:24 XPC k3s[482187]: I0817 10:21:24.896820  482187 shared_informer.go:320] Caches are synced for resource quota
+Aug 17 10:21:25 XPC k3s[482187]: I0817 10:21:25.212117  482187 shared_informer.go:313] Waiting for caches to sync for garbage collector
+Aug 17 10:21:25 XPC k3s[482187]: I0817 10:21:25.212187  482187 shared_informer.go:320] Caches are synced for garbage collector
+Aug 17 10:21:45 XPC k3s[482187]: I0817 10:21:45.674950  482187 iptables.go:504] Some iptables rules are missing; deleting and recreating rules
+Aug 17 10:21:45 XPC k3s[482187]: I0817 10:21:45.683740  482187 iptables.go:372] bootstrap done
+Aug 17 10:25:37 XPC k3s[482187]: time="2024-08-17T10:25:37-04:00" level=info msg="COMPACT revision 0 has already been compacted"
+Aug 17 10:30:37 XPC k3s[482187]: time="2024-08-17T10:30:37-04:00" level=info msg="COMPACT revision 0 has already been compacted"
+Aug 17 10:35:37 XPC k3s[482187]: time="2024-08-17T10:35:37-04:00" level=info msg="COMPACT revision 0 has already been compacted"

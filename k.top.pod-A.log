@@ -1,0 +1,6 @@
+NAMESPACE     NAME                                      CPU(cores)   MEMORY(bytes)   
+kube-system   coredns-576bfc4dc7-f9kkh                  2m           25Mi            
+kube-system   local-path-provisioner-6795b5f9d8-zltt5   1m           12Mi            
+kube-system   metrics-server-557ff575fb-jslvw           4m           28Mi            
+kube-system   svclb-traefik-fbfbd908-q8fcm              0m           0Mi             
+kube-system   traefik-5fb479b77-jmzhg                   1m           38Mi            

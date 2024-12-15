@@ -1,0 +1,41 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            28:ee:e3:5e:95:ae:7b:c0:4d:ab:47:79:b4:08:d4:c2
+        Signature Algorithm: ecdsa-with-SHA256
+        Issuer: CN = k3s-client-ca@1723904437
+        Validity
+            Not Before: Aug 18 20:37:13 2024 GMT
+            Not After : Aug 19 20:37:13 2024 GMT
+        Subject: O = devops + O = system:basic-user, CN = x1
+        Subject Public Key Info:
+            Public Key Algorithm: ED25519
+                ED25519 Public-Key:
+                pub:
+                    bf:fe:04:58:2c:69:ae:d3:64:60:06:92:bb:ba:cb:
+                    40:73:5f:39:cc:dc:d2:ee:0f:21:7b:6f:2a:fb:f3:
+                    e0:f8
+        X509v3 extensions:
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Authority Key Identifier: 
+                BC:E3:64:E4:57:31:06:53:13:25:13:E3:AE:7D:46:F9:01:63:4C:D9
+    Signature Algorithm: ecdsa-with-SHA256
+    Signature Value:
+        30:44:02:20:14:18:7d:55:3e:2b:f1:9b:41:cd:7f:f3:a4:41:
+        cc:6f:0b:df:41:54:56:67:6d:57:4d:a3:2e:be:97:6a:5d:d3:
+        02:20:68:0d:bb:16:b5:90:66:77:ed:23:53:04:71:63:89:36:
+        c4:ae:52:c8:ec:4e:5c:0d:6a:7d:57:0a:7c:92:b8:8f
+-----BEGIN CERTIFICATE-----
+MIIBbzCCARagAwIBAgIQKO7jXpWue8BNq0d5tAjUwjAKBggqhkjOPQQDAjAjMSEw
+HwYDVQQDDBhrM3MtY2xpZW50LWNhQDE3MjM5MDQ0MzcwHhcNMjQwODE4MjAzNzEz
+WhcNMjQwODE5MjAzNzEzWjA4MSkwDQYDVQQKEwZkZXZvcHMwGAYDVQQKExFzeXN0
+ZW06YmFzaWMtdXNlcjELMAkGA1UEAxMCeDEwKjAFBgMrZXADIQC//gRYLGmu02Rg
+BpK7ustAc185zNzS7g8he28q+/Pg+KNGMEQwEwYDVR0lBAwwCgYIKwYBBQUHAwIw
+DAYDVR0TAQH/BAIwADAfBgNVHSMEGDAWgBS842TkVzEGUxMlE+OufUb5AWNM2TAK
+BggqhkjOPQQDAgNHADBEAiAUGH1VPivxm0HNf/OkQcxvC99BVFZnbVdNoy6+l2pd
+0wIgaA27FrWQZnftI1MEcWOJNsSuUsjsTlwNan1XCnySuI8=
+-----END CERTIFICATE-----

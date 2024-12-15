@@ -1,0 +1,26 @@
+NAME       STATUS   ROLES                  AGE   VERSION        INTERNAL-IP      EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION                       CONTAINER-RUNTIME
+node/xpc   Ready    control-plane,master   44m   v1.30.3+k3s1   172.27.240.169   <none>        Ubuntu 22.04.4 LTS   5.15.153.1-microsoft-standard-WSL2   containerd://1.7.17-k3s1
+
+NAMESPACE     NAME                                     READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS               IMAGES                                    SELECTOR
+kube-system   deployment.apps/coredns                  1/1     1            1           44m   coredns                  rancher/mirrored-coredns-coredns:1.10.1   k8s-app=kube-dns
+kube-system   deployment.apps/local-path-provisioner   1/1     1            1           44m   local-path-provisioner   rancher/local-path-provisioner:v0.0.28    app=local-path-provisioner
+kube-system   deployment.apps/metrics-server           1/1     1            1           44m   metrics-server           rancher/mirrored-metrics-server:v0.7.0    k8s-app=metrics-server
+kube-system   deployment.apps/traefik                  1/1     1            1           43m   traefik                  rancher/mirrored-library-traefik:2.10.7   app.kubernetes.io/instance=traefik-kube-system,app.kubernetes.io/name=traefik
+
+NAMESPACE     NAME                                    DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE   CONTAINERS             IMAGES                                                SELECTOR
+kube-system   daemonset.apps/svclb-traefik-fbfbd908   1         1         1       1            1           <none>          43m   lb-tcp-80,lb-tcp-443   rancher/klipper-lb:v0.4.7,rancher/klipper-lb:v0.4.7   app=svclb-traefik-fbfbd908
+
+NAMESPACE     NAME                                          READY   STATUS      RESTARTS   AGE   IP          NODE   NOMINATED NODE   READINESS GATES
+kube-system   pod/coredns-576bfc4dc7-f9kkh                  1/1     Running     0          43m   10.42.0.6   xpc    <none>           <none>
+kube-system   pod/helm-install-traefik-crd-6fvnf            0/1     Completed   0          43m   10.42.0.3   xpc    <none>           <none>
+kube-system   pod/helm-install-traefik-gcswm                0/1     Completed   1          43m   10.42.0.2   xpc    <none>           <none>
+kube-system   pod/local-path-provisioner-6795b5f9d8-zltt5   1/1     Running     0          43m   10.42.0.5   xpc    <none>           <none>
+kube-system   pod/metrics-server-557ff575fb-jslvw           1/1     Running     0          43m   10.42.0.4   xpc    <none>           <none>
+kube-system   pod/svclb-traefik-fbfbd908-q8fcm              2/2     Running     0          43m   10.42.0.7   xpc    <none>           <none>
+kube-system   pod/traefik-5fb479b77-jmzhg                   1/1     Running     0          43m   10.42.0.8   xpc    <none>           <none>
+
+NAMESPACE     NAME                     TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)                      AGE   SELECTOR
+default       service/kubernetes       ClusterIP      10.43.0.1       <none>           443/TCP                      44m   <none>
+kube-system   service/kube-dns         ClusterIP      10.43.0.10      <none>           53/UDP,53/TCP,9153/TCP       44m   k8s-app=kube-dns
+kube-system   service/metrics-server   ClusterIP      10.43.139.106   <none>           443/TCP                      44m   k8s-app=metrics-server
+kube-system   service/traefik          LoadBalancer   10.43.77.118    172.27.240.169   80:32083/TCP,443:30823/TCP   43m   app.kubernetes.io/instance=traefik-kube-system,app.kubernetes.io/name=traefik

@@ -1,0 +1,493 @@
+1  ll
+2  ls
+3  make
+4  hostnamectl
+5  hostname
+6  cat /etc/os-release 
+7  ls /home
+8  ll /home
+9  ls -hal /home
+ wget
+ apt install wget
+ apt install curl
+ apt install http-tools
+ exit
+ type -t pushd
+ type pushd
+ exit
+ exit
+ ll
+ push /etc
+ exit
+ ll
+ . ./bashrc
+ . ./.bashrc
+ ll
+ push /etc
+ ip route
+ exit
+ exit
+ make
+ yum -y install make
+ make
+ make all
+ bash
+ sh
+ exit
+ ls /usr/sudoers
+ ls /etc/sudoers
+ ls etc
+ ls /etc
+ ls /etc/profile
+ exit
+ ll
+ id -u
+ bash
+ exit
+ ls /etc/sudoers
+ ls /etc
+ ls /etc/systemd
+ ls /etc/passwd
+ cat /etc/passwd
+ exit
+ sudo su
+ type -t sudo
+ type sudo
+ type -t sudo || echo no
+ type -t sudo && echo no
+ exit
+ ll
+ ls
+ exit
+ make all
+ bash
+ sh
+ exit
+ ll
+ exit
+ ll
+ bash
+ exit
+ make all
+ exit
+ adduser u1
+ sudo su u1
+ su u1
+ su u1
+ id -un
+ echo $USER
+ rm /etc/profile.d/-0*
+ rm /etc/profile.d/docker.sh 
+ rm /etc/profile.d/k8s.sh 
+ rm /etc/profile.d/git.sh 
+ rm /etc/profile.d/vim.sh 
+ su u1
+ exit
+ ll
+ exit
+ make all
+ sh
+ exit
+ ll
+ su u1
+ . ./.bashrc
+ /etc/profile.d/k8s.sh
+ . /etc/profile.d/k8s.sh
+ ps
+ exit
+ ll
+ ps
+bash
+exit
+. ./.bashrc
+ll
+push
+push /etc
+ls /etc/profile.d/
+rm /etc/profile.d/root-*
+rm /etc/profile.d/vim.sh
+rm /etc/profile.d/k8s.sh
+rm /etc/profile.d/docker.sh
+rm /etc/profile.d/git.sh
+ls /etc/profile.d/
+exit
+ls /etc/profile.d/
+exit
+sh -c 'ls'
+find etc_profile.d -type f
+find etc_profile.d -type f -iname '*.sh' -exec /bin/bash -c 'f=${1##*/};cp -p $1 /etc/profile.d/$(id -un)-${f%%.*}' _ {} \;
+bash
+find etc_profile.d -type f -iname '*.sh' -exec /bin/bash -c 'f=${1##*/};cp $1 /etc/profile.d/$(id -un)-${f%%.*}' _ {} \;
+ls /etc/profile.d/
+ls -hl /etc/profile.d/
+find etc_profile.d -type f -iname '*.sh' -exec /bin/bash -c 'f=${1##*/};rm /etc/profile.d/$(id -un)-${f%%.*}' _ {} \;
+ls -hl /etc/profile.d/
+find etc_profile.d -type f -iname '*.sh' -exec /bin/bash -c 'f=${1##*/};cp $1 /etc/profile.d/$(id -un)-${f%%.*}' _ {} \;
+ls -hl /etc/profile.d/
+find etc_profile.d -type f -iname '*.sh' -exec /bin/bash -c 'f=${1##*/};rm /etc/profile.d/$(id -un)-${f%%.*}' _ {} \;
+ls -hl /etc/profile.d/
+find etc_profile.d -type f -iname '*.sh' -exec /bin/sh -c 'f=${1##*/};cp $1 /etc/profile.d/$(id -un)-${f%%.*}' _ {} \;
+ls -hl /etc/profile.d/
+find etc_profile.d -type f -iname '*.sh' -exec /bin/bash -c 'f=${1##*/};rm /etc/profile.d/$(id -un)-${f%%.*}' _ {} \;
+ls -hl /etc/profile.d/
+su u1
+ls -hal
+chown u1:u1 .bash_history
+chown u1:u1 .ash_history
+ls -hal
+exit
+ll
+sudo
+su u1
+exit
+ll
+apt-get install make
+apt-get install gnu
+apt-get install gcc
+exit
+su u1
+./make.recipes.sh all
+ls /usr/share/git-core
+ls /usr/share/git
+echo ${GIT_PROMPT_DIR:foo}
+echo ${GIT_PROMPT_DIR:-foo}
+./make.recipes.sh all
+exit
+su u1
+ls /etc/profile.d/
+exit
+su u1
+find /etc/profile.d -type f -iname 'root-*'
+find /etc/profile.d -type f -iname 'root-*' -exec /bin/bash -c 'echo mv $1 u1-${1/root-//}' _ {} \;
+find /etc/profile.d -type f -iname 'root-*' -exec /bin/bash -c 'echo mv $1 u1-${1/root-/}' _ {} \;
+pushd /etc/profile.d
+find . -type f -iname 'root-*' -exec /bin/bash -c 'echo mv $1 u1-${1/root-/}' _ {} \;
+ls
+find . -type f -iname 'root-*' -exec /bin/bash -c 'echo mv $1 u1-${1/root-/}' _ {} \;
+find . -type f -iname 'root-*' -exec echo rm {} \;
+find . -type f -iname 'root-*' -exec rm {} \;
+exit
+ll
+exit
+bash
+exit
+make
+ls
+./make.recipes.sh all
+bash
+exit
+su u1
+su u1 -
+find /etc/profile.d -type f -iname 'root-*' -exec rm {} \;
+ls /etc/profile.d
+exit
+su u1
+./make.recipes.sh all
+ls /etc/profile.d
+su u1
+push /etc/profile.d/
+ll
+mv root-01-bashrc.sh u1-01-bashrc.sh 
+mv root-02-bash_functions.sh u1-02-bash_functions.sh 
+ll
+su u1
+pop
+ll
+su u1
+exit
+su u1
+push /etc/profile.d/
+mv u1-01-bashrc.sh root-01-bashrc.sh 
+mv u1-02-bash_functions.sh root-02-bash_functions.sh 
+exit
+su u1
+su -- u1
+bash --login
+bash -i
+bash --help
+bash -l
+exit
+ip addr
+exit
+bash -l
+su u1
+adduser u1
+su u1
+make
+./make.recipes.sh all
+exit
+bash
+bash
+exit
+ll
+exit
+bash
+. ./.bashrc
+ll
+exit
+. ./.bashrc
+exit
+sh
+sh
+exit
+ll
+utc
+exit
+push /etc/profile.d/
+ll
+rm root-*
+ll
+pop
+ll
+make
+./make.recipes.sh all
+push /etc/profile.d/
+pop
+ll /etc/profile.d/
+ls /etc/profile.d/
+bash -l
+./make.recipes.sh all
+ls -hal /etc/profile.d/${id}-*
+ls -hal /etc/profile.d/0-*
+clear
+./make.recipes.sh all
+ls 
+ll
+ls .local
+ls .local/bin
+ll
+ll ~
+pwd
+su u1
+exit
+push /etc
+bash
+exit
+exit 
+ls /etc/profile.d/
+. /etc/profile.d/0-git.sh 
+. /etc/profile.d/0-k8s.sh 
+exit
+bash
+bash -l
+exit
+ll /usr/local/bin
+ll /usr/local
+ll /usr/local/sbin/
+ll /usr/local/lib
+ll /usr/local/bin
+ls /etc/vim
+ll /usr/local/bin
+ll
+./make.recipes.sh all
+./make.recipes.sh user
+ll /usr/local/bin
+ansibash
+su u1
+type ansibash
+sh
+exit
+ls
+bash
+exit
+git
+exit
+bash
+ll
+ls 
+ls -hal
+./make.recipes.sh all
+id -u
+ls -hal
+exit
+su u1
+exit
+su u1
+exit
+bash -l
+exit
+ll
+ls
+ls -hal
+./make.recipes.sh all
+bash
+exit
+ll
+exit
+ll
+ip addr
+utc
+exit
+bash -l
+exit
+cat /root/.bashrc
+exit
+ll
+exit
+ll
+tls
+exit
+vi /root/.bash_functions 
+vim /root/.bash_functions 
+exit
+ll
+exit
+pwd
+ll
+ll /home
+exit
+ll
+exit
+exit
+find
+type find
+exit
+ps
+ll /usr/bin
+ll /usr/bin/ps
+exit
+ll /home
+exit
+clear
+type clear
+type cls
+which cls
+which clear
+type -f cls
+type -t cls
+type -t clsz
+type ls
+type ps
+type psz
+type -t psz
+type -t ps
+type -t ps;echo $?
+type -t psz;echo $?
+echo ' ';echo $?
+echo '';echo $?
+foo='';echo $?
+[[ $foo == '' ]];echo $?
+[[ $foo == 'bar' ]];echo $?
+$echo foo
+echo $foo
+[[ $foo == 'bar' ]];echo $?
+foo=bar
+[[ $foo == 'bar' ]];echo $?
+[[ $foo != 'bar' ]];echo $?
+[[ $foo != 'barz' ]];echo $?
+[[ $foo != 'barz' ]] && echo yep || echo nope
+[[ $foo == 'barz' ]] && echo yep || echo nope
+[[ $foo == 'bar' ]] && echo yep || echo nope
+[[ $foo == 'bar ' ]] && echo yep || echo nope
+go build
+go build help
+go help build
+go help run
+go help test
+go help test |grep count
+go help test |grep -B10 -A10 count
+synch dropbox;synch google;synch mega
+k config view
+pop
+up
+push infra/kubernetes/k3s/
+ll
+curl -sfL https://get.k3s.io |sh - &&     sudo chmod 0644 /etc/rancher/k3s/k3s.yaml
+k get pod
+k get pod -A
+kx
+k config view
+dps
+kx
+k config view
+ll /etc/rancher
+ll /etc/rancher/k3s/
+ll
+k3s
+which k3s
+k3s kubectl get pod
+k3s kubectl get pod -A
+dps
+psk
+ps -aux |grep k3s
+ll /etc/rancher
+ll /etc/rancher/k3s/
+cat /etc/rancher/k3s/k3s.yaml 
+cat /etc/rancher/k3s/k3s.yaml  |tee etc.rancher.k3s.yaml
+systemctl status k3s.service
+systemctl status k3s.service |tee systemctl.status.k3s.service.log
+ll
+k3s kubectl
+k3s kubectl config view
+k3s kubectl config view |tee k3s.kubectl.config.view.log
+k3s kubectl config view |yq .
+k3s kubectl config view --raw |yq .
+k3s kubectl config view --raw |yq .clusters.cluster.certificate-authority-data
+k3s kubectl config view --raw |yq .clusters[].cluster.certificate-authority-data
+k3s kubectl config view --raw |yq .clusters[].cluster.certificate-authority-data |openssl -x509
+k3s kubectl config view --raw |yq .clusters[].cluster.certificate-authority-data |openssl -x509 -text
+k3s kubectl config view --raw |yq .clusters[].cluster.certificate-authority-data |openssl x509 -text
+k3s kubectl config view --raw |yq .clusters[].cluster.certificate-authority-data |openssl x509 -in
+k3s kubectl config view --raw |yq .clusters[].cluster.certificate-authority-data |openssl x509 -in -
+k3s kubectl config view --raw |yq .clusters[].cluster.certificate-authority-data |openssl x509 -text -in
+k3s kubectl config view --raw |yq .clusters[].cluster.certificate-authority-data |base64 -d |openssl x509 -text -in
+k3s kubectl config view --raw |yq .clusters[].cluster.certificate-authority-data |base64 -d |openssl x509 -text
+k3s kubectl config view --raw |yq .clusters[].cluster.certificate-authority-data |base64 -d |openssl x509
+k3s kubectl config view --raw |yq .clusters[].cluster.certificate-authority-data |base64 -d |openssl x509 -text
+k3s kubectl config view --raw |yq .clusters[].cluster.certificate-authority-data |base64 -d |openssl x509 -text |tee kubeconfig.cluster.certificate-authority-data.openssl.log
+ll
+k3s kubectl config view 
+ll
+mv kubeconfig.cluster.certificate-authority-data.openssl.log kubeconfig.certificate-authority-data.openssl.x509.log 
+ll
+k get deploy -A
+which k
+type k
+alias k='k3s kubectl'
+k get deploy,ds,sts -A
+k get deploy,ds,sts,pod -A
+k get deploy,ds,sts,pod,svc,ingress -A
+history
+history |cut -d' ' -f3
+history |cut -d' ' -f4
+history |cut -d' ' -f5
+history |cut -d' ' -f5-
+history |cut -d' ' -f5- |tee history.log
+k get deploy,ds,sts,pod,svc,ingress -A
+k get deploy,ds,sts,pod,svc,ingress -A |tee k.get.objs-A.log
+which k3s
+ls /usr/local/bin
+crictl images
+sudo crictl images
+k get node
+k get node -o wide
+k get node,deploy,ds,sts,pod,svc,ingress -A -o wide |tee k.get.objs-A.log
+curl https://172.27.240.169
+curl -ki https://172.27.240.169
+curl -ki https://172.27.240.169/healthz
+curl -ki https://172.27.240.169:6443/healthz
+curl -ki https://172.27.240.169:6443/healthz?verbose
+curl -ki https://172.27.240.169:6443/healthz/?verbose
+sudo curl -ki https://172.27.240.169:6443/healthz/?verbose
+curl -ki https://172.27.240.169:6443/readyz
+curl -ki https://172.27.240.169/readyz
+curl -ki https://172.27.240.169/version/
+curl -ki https://172.27.240.169:6443/version/
+k top node
+k top pod -A
+k top node,pod -A
+k top pod -A |tee k.top.pod-A.log
+k top node |tee k.top.node.log
+curl -ki https://172.27.240.169:6443/version/
+k get lb
+k get svc
+k get svc -A
+k get ingress -A
+k get pod -A
+k get svc
+k get svc -A
+curl -ki https://172.27.240.169/healthz
+ip -4 -brief addr
+k get ingress -A
+k3s kubectl config view --raw -o jsonpath='{.clusters[].cluster.certificate-authority-data}' |base64 -d |openssl x509 -text 
+history |cut -d' ' -f5- |tee history.log
