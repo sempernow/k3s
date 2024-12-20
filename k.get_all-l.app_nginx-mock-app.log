@@ -1,0 +1,11 @@
+NAME                 READY   STATUS    RESTARTS   AGE
+pod/nginx-mock-app   1/1     Running   0          7m46s
+
+NAME                     TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+service/nginx-mock-app   ClusterIP   10.43.195.163   <none>        80/TCP    7m46s
+
+NAME                       ENDPOINTS       AGE
+endpoints/nginx-mock-app   10.42.0.30:80   7m46s
+
+NAME                                       CLASS     HOSTS         ADDRESS          PORTS   AGE
+ingress.networking.k8s.io/nginx-mock-app   traefik   app.wsl.lan   172.27.240.169   80      7m47s
