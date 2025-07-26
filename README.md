@@ -1,20 +1,28 @@
-# [K3s](https://docs.k3s.io/ "docs.k3s.io")
+# [K3S](https://docs.k3s.io/ "docs.k3s.io")
+
+>Pronounced "kubes" or "k-three-ess".
 
 ## TL;DR
 
-K3s is an unconventional though __very useful__ distro, and has __excellent documentation__. 
+K3S is an unconventional though __very useful__ distro from SUSE (Rancher) having  __excellent documentation__. 
 It installs quickly with __zero configuration__ for its sensible defaults. 
 It includes CRI, CNI, service mesh, load balancer, and ingress controller, 
 all chosen for their light weight, making it the go-to distro for edge devices.
 
-Includes [`k3s` CLI](https://docs.k3s.io/cli), 
+
+K3S includes [`k3s` CLI](https://docs.k3s.io/cli), 
 which functions as some kind of wrapper 
 for some or all of the related tools 
 to perform a variety of common cluster-administration tasks.
 
-The one gotcha for newcomers is that using it requires `root` access, 
+The one quick-start glitch for newcomers is that using it requires `root` access, 
 yet it installs to `/usr/local/bin`, 
 which is not in the sudoers `PATH` of many Linux distros. 
+
+[k0S](https://k0sproject.io/) (Mirantis) is an alternative to K3s.
+K0S may be configured to run without systemd and on a read-only filesystem. 
+Its default configuration includes [Konnectivity](https://kubernetes.io/docs/tasks/extend-kubernetes/setup-konnectivity/), 
+which provisions proxy servers to secure traffic of the control-plane using gRPC.
 
 ## [Overview](https://chatgpt.com/share/6709ad79-d3b4-8009-b03e-44499a47ac4c "ChatGPT")
 
@@ -43,7 +51,7 @@ The K3s binary includes components such as the core, which are normally static p
 
 This architecture is a major reason why K3s is so lightweight and popular for edge computing, IoT, and other resource-constrained environments.
 
-## [k3s CLI](https://docs.k3s.io/cli)
+## [`k3s` CLI](https://docs.k3s.io/cli)
 
 ```bash
 k3s             # List commands
@@ -145,7 +153,7 @@ node-label:
   - "something=amazing"
 cluster-init: true
 ```
-- [K3s server configuration](https://docs.k3s.io/cli/server)
+- [K3S server configuration](https://docs.k3s.io/cli/server)
     - Or: `k3s server --help`
 
 
@@ -312,7 +320,7 @@ curl -sSLO https://github.com/k3s-io/k3s/releases/download/${v}%2Bk3s1/k3s
 ```
 - [`k3s-air-gap-prep.sh`](k3s-air-gap-prep.sh)
 
-### [HA K3s](https://docs.k3s.io/architecture#high-availability-k3s)
+### [HA K3S](https://docs.k3s.io/architecture#high-availability-k3s)
 
 ## Usage 
 
@@ -474,25 +482,3 @@ pod "nbox-c" deleted
 ```
 
 ### &nbsp;
-<!-- 
-
-# Markdown Cheatsheet
-
-[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet "Wiki @ GitHub")
-
-
-# Link @ (HTML | MD)
-
-([HTML](file:///d:/1%20Data/IT/___.html "@ browser") | [MD](file:///d:/1%20Data/IT/___.md "___"))   
-
-
-# Bookmark
-
-- Reference
-[Foo](#foo)
-
-- Target
-<a name="foo"></a>
-
--->
-
